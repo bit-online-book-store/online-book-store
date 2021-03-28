@@ -28,9 +28,9 @@ public class BookList extends JFrame implements ActionListener{//도서목록
    private JTabbedPane menu;//탭페인
    private JPanel totalP,nsP,poemP,humanP,novelP, essayP,artP;//메뉴탭
 //   private MenuPane menup;
-   
-   
-   
+
+// test ㅎ2
+
    public BookList() {//생성자
       setLayout(null);
 //-------------------------------------------------------------------------
@@ -41,15 +41,15 @@ public class BookList extends JFrame implements ActionListener{//도서목록
       cartBtn.setBounds(910,40,100,30);
       orderBtn = new JButton("주문목록");
       orderBtn.setBounds(1020,40,100,30);
-      
-      
-      
-      
+
+
+
+
       //로고사진
       logoPic = new JLabel(new ImageIcon("logo.PNG"));
       logoPic.setBounds(17,12,300,175);
-      
-   
+
+
       //검색창
       String [] subject = {"제목","저자명","출판사"};
       subjectComboBox = new JComboBox<String>(subject);
@@ -60,32 +60,32 @@ public class BookList extends JFrame implements ActionListener{//도서목록
       searchBtn = new JButton("검색");
       searchBtn.setBounds(725,100,85,30);
       searchBtn.setFont(new Font("중나좋체 Light",Font.PLAIN,20));
-            
-      
+
+
       //탭패널 생성 - 좌측 메뉴탭을 눌렀을때 생성되는 페이지창
       totalP = new JPanel();//전체
-      totalP.setBackground(Color.WHITE);   
-      
+      totalP.setBackground(Color.WHITE);
+
       nsP = new JPanel();//자연과학
       nsP.setBackground(Color.WHITE);
-      
+
       poemP = new JPanel();//시
       poemP.setBackground(Color.WHITE);
-      
+
       humanP = new JPanel();//인문학
       humanP.setBackground(Color.WHITE);
-      
+
       novelP = new JPanel();//소설
       novelP.setBackground(Color.WHITE);
-      
+
       essayP = new JPanel();//에세이
       essayP.setBackground(Color.WHITE);
-      
+
       artP = new JPanel();//예술
       artP.setBackground(Color.WHITE);
-      
-      
-      
+
+
+
       //메뉴탭 생성
       menu = new JTabbedPane(SwingConstants.LEFT);
       menu.setBounds(80,180,1000,550);
@@ -97,8 +97,8 @@ public class BookList extends JFrame implements ActionListener{//도서목록
       //menu.addTab("소설", new Novel());
 //      menu.addTab("에세이", new Eassay());
 //      menu.addTab("예술", new Art());
-            
-      
+
+
       //컨테이너
       Container c = this.getContentPane();
       c.add(mypageBtn);
@@ -110,22 +110,22 @@ public class BookList extends JFrame implements ActionListener{//도서목록
       c.add(logoPic);
       c.setBackground(Color.WHITE);
       c.add("LEFT",menu);
-      
+
       setVisible(true);
       setTitle("도서목록");
       setBounds(50,50,1200,800);
       //setResizable(false);
       setDefaultCloseOperation(EXIT_ON_CLOSE);
-      
+
       event();
-      
-   }//BookList() 
+
+   }//BookList()
 
    //이벤트
    private void event() {
 	   mypageBtn.addActionListener(this);
 	   orderBtn.addActionListener(this);
-      
+
    }
 
    @Override
@@ -137,10 +137,10 @@ public class BookList extends JFrame implements ActionListener{//도서목록
 			new OrderListForm();
 			setVisible(false);
 		}
-      
+
    }
-   
-   
+
+
    public static void main(String[] args) {
       new BookList();
    }
